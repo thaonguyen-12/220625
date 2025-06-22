@@ -3,7 +3,7 @@
 
 int main() {
     int n, sum = 0;
-    int arr[1000]; // Giới hạn tối đa 1000 phần tử
+    int arr[1000]; 
 
     printf("Nhap so luong phan tu (toi da 1000): ");
     scanf("%d", &n);
