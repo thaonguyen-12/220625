@@ -1,25 +1,27 @@
 ﻿#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
+struct phan_so {
+	int tu_so;
+	int mau_so;
+};
+
 int main() {
-    int n, sum = 0;
-    int arr[1000]; 
+	struct phan_so A;
+	struct phan_so B;
+	struct phan_so C;
 
-    printf("Nhap so luong phan tu (toi da 1000): ");
-    scanf("%d", &n);
 
-    if (n <= 0 || n > 1000) {
-        printf("So luong phan tu khong hop le!\n");
-        return 1;
-    }
+	A.tu_so = 1;
+	A.mau_so = 2; 
 
-    for (int i = 0; i < n; i++) {
-        printf("Nhap phan tu thu %d: ", i + 1);
-        scanf("%d", &arr[i]);
-        sum += arr[i];
-    }
+	B.tu_so = 2;
+	B.mau_so = 3;
 
-    printf("Tong cac phan tu trong mang la: %d\n", sum);
+	C.tu_so = A.tu_so * B.tu_so;
+	C.mau_so = A.mau_so * B.mau_so;
+	
 
-    return 0;
+	printf("phan so C la: %d/%d\n", C.tu_so, C.mau_so);
+	return 0;
 }
